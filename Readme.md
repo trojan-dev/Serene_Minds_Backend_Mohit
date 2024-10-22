@@ -16,6 +16,8 @@ This is backend of serene minds which has Node.js-based Authentication API using
 │   └── database.js          # Prisma client configuration
 ├── controllers
 │   └── userController.js   # Authentication logic (combined with services)
+├── prisma
+│   └── schema.prisma       # Contains Schema for database
 ├── routes
 │   └── userRoutes.js       # API routes for authentication
 ├── .env                    # Environment variables (not committed to version control)
