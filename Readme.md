@@ -100,6 +100,3 @@ This is backend of serene minds which has Node.js-based Authentication API using
 - [Prisma](https://www.prisma.io/) - Next-generation ORM for Node.js
 - [Supabase](https://supabase.com/) - Open-source Firebase alternative with PostgreSQL
 
-## Contributing
-
-Feel free to submit issues or pull requests to improve the project. Follow the standard [GitHub flow](https://guides.github.com/introduction/flow/) for contributions.
