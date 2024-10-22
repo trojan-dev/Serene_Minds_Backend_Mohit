@@ -91,8 +91,8 @@ This is backend of serene minds which has Node.js-based Authentication API using
 
 ## Scripts
 
-- `npm start` - Start the application.
-- `npm run dev` - Start the application in development mode with nodemon (if nodemon is installed).
+- `npm start` - Start the application in development mode with nodemon (if nodemon is installed).
+- `npm run dev` - Start the application.
 
 ## Dependencies
 
