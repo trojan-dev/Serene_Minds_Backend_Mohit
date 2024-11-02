@@ -1,11 +1,11 @@
 # Serene Minds Backend 
 
-This is backend of serene minds which has Node.js-based Authentication API using **Prisma ORM** to interact with **Supabase PostgreSQL**. The project includes user authentication (login) and demonstrates how to structure the codebase with **controllers** and **routes** in a minimal Express.js server.
+This is the backend of Serene Minds, which features a Node.js-based Authentication API using the **pg** package to interact with **Supabase PostgreSQL**. The project includes user authentication (login) and demonstrates how to structure the codebase with **controllers** and **routes** in a minimal Express.js server.
 
 ## Features
 
 - User login with email and password
-- Prisma ORM setup to interact with Supabase PostgreSQL
+- Direct interaction with Supabase PostgreSQL using the pg package
 - Basic MVC structure (Controller + Routes)
 
 ## Project Structure
@@ -13,25 +13,22 @@ This is backend of serene minds which has Node.js-based Authentication API using
 ```
 .
 ├── config
-│   └── database.js          # Prisma client configuration
+│   └── database.js          # PostgreSQL client configuration
 ├── controllers
-│   └── userController.js   # Authentication logic (combined with services)
-├── prisma
-│   └── schema.prisma       # Contains Schema for database
+│   └── userController.js    # Authentication logic
 ├── routes
-│   └── userRoutes.js       # API routes for authentication
-├── .env                    # Environment variables (not committed to version control)
-├── app.js                  # Main entry point of the application
-├── README.md               # This readme file
-├── package.json            # Project dependencies
-└── node_modules            # Installed dependencies
+│   └── userRoutes.js        # API routes for authentication
+├── .env                      # Environment variables (not committed to version control)
+├── app.js                   # Main entry point of the application
+├── README.md                # This readme file
+├── package.json             # Project dependencies
+└── node_modules             # Installed dependencies
 ```
 
 ## Prerequisites
 
 - **Node.js** (v14 or higher)
 - **PostgreSQL** database hosted on Supabase
-- **Prisma ORM**
 
 ## Setup Instructions
 
@@ -59,14 +56,9 @@ This is backend of serene minds which has Node.js-based Authentication API using
    PORT=3000
    ```
 
-4. **Prisma Setup:**
+4. **Database Setup:**
 
-   Initialize Prisma and set up the database schema:
-
-   ```bash
-   npx prisma init
-   npx prisma migrate dev --name init
-   ```
+   Ensure that your tables and schemas are created in Supabase. You can do this directly in the Supabase dashboard.
 
 5. **Run the project:**
 
@@ -93,12 +85,15 @@ This is backend of serene minds which has Node.js-based Authentication API using
 
 ## Scripts
 
-- `npm start` - Start the application in development mode with nodemon (if nodemon is installed).
-- `npm run dev` - Start the application.
+- `npm start` - Start the application in development mode.
+- `npm run dev` - Start the application with live reload (if nodemon is installed).
 
 ## Dependencies
 
 - [Express](https://expressjs.com/) - Web framework for Node.js
-- [Prisma](https://www.prisma.io/) - Next-generation ORM for Node.js
+- [pg](https://node-postgres.com/) - PostgreSQL client for Node.js
 - [Supabase](https://supabase.com/) - Open-source Firebase alternative with PostgreSQL
 
+---
+
+This revised README reflects your current setup with the `pg` package and the use of Supabase for managing your PostgreSQL database, along with the project structure and setup instructions. Let me know if you need any further modifications!
