@@ -1,20 +1,7 @@
-const { Pool } = require('pg');
-require('dotenv').config();
+// db.js
+import postgres from 'postgres'
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  // ssl: {
-  //   rejectUnauthorized: false, // Disable SSL certificate validation (for testing purposes only)
-  // },
-});
+const connectionString = "postgresql://postgres.qmdfzzfphkfybewcyhej:sereneminds__db@aws-0-ap-south-1.pooler.supabase.com:6543/postgres"
+const sql = postgres(connectionString)
 
-// Connect to the database and log the status
-pool.connect()
-  .then(() => {
-    console.log('Connected to PostgreSQL database successfully');
-  })
-  .catch(err => {
-    console.error('Database connection error:', err.stack);
-  });
-
-module.exports = pool;
+export default sql
